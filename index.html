@@ -11,7 +11,7 @@
 
     <body style='margin : 0px; overflow: hidden;'>
         <!-- we add detectionMode and matrixCodeType to tell AR.js to recognize barcode markers -->
-        <a-scene embedded vr-mode-ui="enabled: false" arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
+        <!-- <a-scene embedded vr-mode-ui="enabled: false" arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
 
         <a-assets>
             <a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-playground/models/CesiumMan.gltf"></a-asset-item>
@@ -21,6 +21,14 @@
          </a-marker>
 
         <a-entity camera></a-entity>
+        </a-scene> -->
+
+        <a-scene embedded arjs='sourceType: webcam;'> 
+            <!-- handle marker with your own pattern -->
+            <a-marker preset='custom' url='https://raw.githubusercontent.com/taijased/viewer-webar/master/patterns/pattern.patt'>
+            <a-image src="https://raw.githubusercontent.com/taijased/viewer-webar/master/patterns/pattern.png" position="0 0 0" rotation="90 180 0 "> 
+            </a-marker> <!-- add a simple camera -->
+            <a-entity camera></a-entity> 
         </a-scene>
     </body>
 </html>
