@@ -23,27 +23,15 @@
             <a-entity myobject></a-entity>
         </a-marker>
 
-        <a-marker id="animated-marker" type='barcode' value='6'>
+        <!-- <a-marker id="animated-marker" type='barcode' value='6'>
             <a-entity
                 animation-mixer
                 gltf-model="#animated-asset"
                 scale="2 2 2">
             </a-entity>
-        </a-marker>
+        </a-marker> -->
 
         <a-entity camera></a-entity>
         </a-scene>
-        <script>
-            var elem = document.getElementById("viewer");
-            if (elem.requestFullscreen) {
-                elem.requestFullscreen();
-            } else if (elem.mozRequestFullScreen) { /* Firefox */
-                elem.mozRequestFullScreen();
-            } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
-                elem.webkitRequestFullscreen();
-            } else if (elem.msRequestFullscreen) { /* IE/Edge */
-                elem.msRequestFullscreen();
-            }
-        </script>
     </body>
 </html>
